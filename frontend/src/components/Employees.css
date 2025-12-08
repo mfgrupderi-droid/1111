@@ -1,0 +1,144 @@
+/* Ana liste container'ı */
+.employee-list {
+    display: flex;
+    flex-direction: column; /* Kartları alt alta sıralar */
+    gap: 10px; /* Kartlar arasındaki boşluk */
+    margin-top: 20px;
+  }
+  
+  /* Her bir çalışan kartı */
+  .employee-card {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 10px 15px; /* Daha kompakt hale getirildi */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Daha hafif gölge */
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+  
+  /* Kartın üzerine gelindiğinde */
+  .employee-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Çalışan avatarı */
+  .employee-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  /* Çalışan bilgileri (isim, iletişim) */
+  .employee-info {
+      flex-grow: 1; /* Gerekli alanı kaplaması için */
+  }
+  
+  .employee-name {
+      font-weight: 600;
+      margin: 0;
+      font-size: 16px;
+  }
+  
+  .employee-contact {
+      color: #8e8e93;
+      margin: 0;
+      font-size: 13px;
+  }
+  
+  
+  /* Düzenleme ve Silme butonlarının container'ı */
+  .actions {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  /* Kartın üzerine gelindiğinde butonları göster */
+  .employee-card:hover .actions {
+    opacity: 1;
+  }
+  
+  /* Buton stilleri */
+  .icon-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    padding: 0;
+  }
+  
+  .icon-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .edit-button svg {
+    color: #007aff; /* Apple Blue */
+  }
+  
+  .delete-button svg {
+    color: #ff3b30; /* Apple Red */
+  }
+  
+  /* Ana buton stilleri */
+  .apple-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+  }
+  
+  .apple-button-primary {
+    background-color: #007aff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.2);
+  }
+  
+  .apple-button-primary:hover {
+    background-color: #0066cc;
+    box-shadow: 0 6px 15px rgba(0, 122, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .apple-button-secondary {
+    background-color: #f5f5f7;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .apple-button-secondary:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .button-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+  }
+  

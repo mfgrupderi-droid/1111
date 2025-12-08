@@ -1,0 +1,1359 @@
+/* Ürün Satış Yönetimi - Ana CSS Dosyası */
+
+/* Kök Değişkenler */
+:root {
+  --urun-satis-primary: #2563eb;
+  --urun-satis-primary-hover: #1d4ed8;
+  --urun-satis-secondary: #64748b;
+  --urun-satis-secondary-hover: #475569;
+  --urun-satis-success: #059669;
+  --urun-satis-success-hover: #047857;
+  --urun-satis-warning: #d97706;
+  --urun-satis-warning-hover: #b45309;
+  --urun-satis-danger: #dc2626;
+  --urun-satis-danger-hover: #b91c1c;
+  --urun-satis-info: #0891b2;
+  --urun-satis-info-hover: #0e7490;
+
+  --urun-satis-bg-primary: #ffffff;
+  --urun-satis-bg-secondary: #f8fafc;
+  --urun-satis-bg-tertiary: #f1f5f9;
+  --urun-satis-bg-overlay: rgba(15, 23, 42, 0.6);
+
+  --urun-satis-text-primary: #0f172a;
+  --urun-satis-text-secondary: #475569;
+  --urun-satis-text-tertiary: #64748b;
+  --urun-satis-text-muted: #94a3b8;
+
+  --urun-satis-border: #e2e8f0;
+  --urun-satis-border-hover: #cbd5e1;
+  --urun-satis-border-active: #94a3b8;
+
+  --urun-satis-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --urun-satis-shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --urun-satis-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --urun-satis-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --urun-satis-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  --urun-satis-radius-sm: 0.375rem;
+  --urun-satis-radius-base: 0.5rem;
+  --urun-satis-radius-md: 0.75rem;
+  --urun-satis-radius-lg: 1rem;
+
+  --urun-satis-transition: all 0.2s ease-in-out;
+  --urun-satis-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Ana Container */
+.urun-satis-container {
+  font-family: var(--urun-satis-font-family);
+  color: var(--urun-satis-text-primary);
+  background-color: var(--urun-satis-bg-secondary);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Header Stilleri */
+.urun-satis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: var(--urun-satis-bg-primary);
+  border-radius: var(--urun-satis-radius-lg);
+  box-shadow: var(--urun-satis-shadow-base);
+}
+
+.urun-satis-title-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--urun-satis-text-primary);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.urun-satis-title-container p {
+  font-size: 1.1rem;
+  color: var(--urun-satis-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.urun-satis-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Buton Stilleri */
+.urun-satis-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--urun-satis-radius-base);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--urun-satis-transition);
+  white-space: nowrap;
+  box-shadow: var(--urun-satis-shadow-sm);
+}
+
+.urun-satis-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.urun-satis-btn-primary {
+  background-color: var(--urun-satis-primary);
+  color: white;
+}
+
+.urun-satis-btn-primary:hover:not(:disabled) {
+  background-color: var(--urun-satis-primary-hover);
+  box-shadow: var(--urun-satis-shadow-md);
+  transform: translateY(-2px);
+}
+
+.urun-satis-btn-secondary {
+  background-color: var(--urun-satis-secondary);
+  color: white;
+}
+
+.urun-satis-btn-secondary:hover:not(:disabled) {
+  background-color: var(--urun-satis-secondary-hover);
+  box-shadow: var(--urun-satis-shadow-md);
+  transform: translateY(-2px);
+}
+
+.urun-satis-btn-success {
+  background-color: var(--urun-satis-success);
+  color: white;
+}
+
+.urun-satis-btn-success:hover:not(:disabled) {
+  background-color: var(--urun-satis-success-hover);
+  box-shadow: var(--urun-satis-shadow-md);
+  transform: translateY(-2px);
+}
+
+.urun-satis-btn-warning {
+  background-color: var(--urun-satis-warning);
+  color: white;
+}
+
+.urun-satis-btn-warning:hover:not(:disabled) {
+  background-color: var(--urun-satis-warning-hover);
+  box-shadow: var(--urun-satis-shadow-md);
+  transform: translateY(-2px);
+}
+
+.urun-satis-btn-danger {
+  background-color: var(--urun-satis-danger);
+  color: white;
+}
+
+.urun-satis-btn-danger:hover:not(:disabled) {
+  background-color: var(--urun-satis-danger-hover);
+  box-shadow: var(--urun-satis-shadow-md);
+  transform: translateY(-2px);
+}
+
+.urun-satis-btn-info {
+  background-color: var(--urun-satis-info);
+  color: white;
+}
+
+.urun-satis-btn-info:hover:not(:disabled) {
+  background-color: var(--urun-satis-info-hover);
+  box-shadow: var(--urun-satis-shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Yükleme Spinner */
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: urun-satis-spin 1s linear infinite;
+}
+
+@keyframes urun-satis-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Arama ve Filtreleme */
+.search-filter-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.search-bar {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-bar svg {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--urun-satis-text-tertiary);
+  pointer-events: none;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 1px solid var(--urun-satis-border);
+  border-radius: var(--urun-satis-radius-base);
+  font-size: 0.875rem;
+  transition: var(--urun-satis-transition);
+  background-color: var(--urun-satis-bg-primary);
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--urun-satis-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-field-dropdown-container {
+  position: relative;
+}
+
+.search-field-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--urun-satis-bg-primary);
+  border: 1px solid var(--urun-satis-border);
+  border-radius: var(--urun-satis-radius-base);
+  cursor: pointer;
+  transition: var(--urun-satis-transition);
+  font-size: 0.875rem;
+  color: var(--urun-satis-text-secondary);
+  white-space: nowrap;
+}
+
+.search-field-button:hover {
+  background-color: var(--urun-satis-bg-tertiary);
+  border-color: var(--urun-satis-border-hover);
+}
+
+.search-field-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background-color: var(--urun-satis-bg-primary);
+  border: 1px solid var(--urun-satis-border);
+  border-radius: var(--urun-satis-radius-base);
+  box-shadow: var(--urun-satis-shadow-lg);
+  z-index: 50;
+  overflow: hidden;
+}
+
+.search-field-dropdown div {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: var(--urun-satis-transition);
+  font-size: 0.875rem;
+}
+
+.search-field-dropdown div:hover {
+  background-color: var(--urun-satis-bg-tertiary);
+}
+
+.search-field-dropdown div:not(:last-child) {
+  border-bottom: 1px solid var(--urun-satis-border);
+}
+
+/* Liste Görünümü */
+.urun-satis-list-view {
+  background-color: var(--urun-satis-bg-primary);
+  border-radius: var(--urun-satis-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--urun-satis-shadow-base);
+}
+
+/* Tablo Stilleri */
+.urun-satis-table-container {
+  overflow-x: auto;
+  border-radius: var(--urun-satis-radius-base);
+  box-shadow: var(--urun-satis-shadow-sm);
+  border: 1px solid var(--urun-satis-border);
+}
+
+.urun-satis-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--urun-satis-bg-primary);
+}
+
+.urun-satis-table thead {
+  background-color: var(--urun-satis-bg-tertiary);
+}
+
+.urun-satis-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--urun-satis-text-secondary);
+  border-bottom: 2px solid var(--urun-satis-border);
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+
+.urun-satis-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--urun-satis-border);
+  vertical-align: middle;
+  font-size: 0.875rem;
+}
+
+.urun-satis-table tbody tr {
+  transition: var(--urun-satis-transition);
+}
+
+.urun-satis-table tbody tr:hover {
+  background-color: var(--urun-satis-bg-secondary);
+}
+
+.urun-satis-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.urun-satis-actions-cell {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.urun-satis-actions-cell button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0 0.25rem;
+  border: none;
+  border-radius: var(--urun-satis-radius-sm);
+  cursor: pointer;
+  transition: var(--urun-satis-transition);
+  color: var(--urun-satis-text-secondary);
+  background-color: transparent;
+}
+
+.urun-satis-actions-cell button:hover {
+  background-color: var(--urun-satis-bg-tertiary);
+  color: var(--urun-satis-text-primary);
+  transform: translateY(-1px);
+}
+
+/* Durum Badge'leri */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--urun-satis-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-badge.sent {
+  background-color: rgba(5, 150, 105, 0.1);
+  color: var(--urun-satis-success);
+}
+
+.status-badge.pending {
+  background-color: rgba(217, 119, 6, 0.1);
+  color: var(--urun-satis-warning);
+}
+
+/* Veri Yok Durumu */
+.no-data {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--urun-satis-text-tertiary);
+}
+
+.no-data svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-data p {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+/* Form Görünümü */
+.urun-satis-form-view {
+  background-color: var(--urun-satis-bg-primary);
+  border-radius: var(--urun-satis-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--urun-satis-shadow-base);
+}
+
+.urun-satis-form-view h3 {
+  margin: 0 0 2rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--urun-satis-text-primary);
+}
+
+.urun-satis-form {
+  max-width: 100%;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--urun-satis-text-secondary);
+  font-size: 0.875rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--urun-satis-border);
+  border-radius: var(--urun-satis-radius-base);
+  font-size: 0.875rem;
+  transition: var(--urun-satis-transition);
+  background-color: var(--urun-satis-bg-primary);
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--urun-satis-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-control:invalid {
+  border-color: var(--urun-satis-danger);
+}
+
+/* Ürün Listesi */
+.urun-list-container {
+  margin: 2rem 0;
+  border: 1px solid var(--urun-satis-border);
+  border-radius: var(--urun-satis-radius-base);
+  overflow: hidden;
+}
+
+.urun-list-container h3 {
+  margin: 0;
+  padding: 1.5rem;
+  background-color: var(--urun-satis-bg-tertiary);
+  border-bottom: 1px solid var(--urun-satis-border);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--urun-satis-text-primary);
+}
+
+.urun-list-headers {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr 80px;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--urun-satis-bg-secondary);
+  border-bottom: 1px solid var(--urun-satis-border);
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--urun-satis-text-secondary);
+}
+
+.urun-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr 80px;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--urun-satis-border);
+  align-items: center;
+}
+
+.urun-row:last-child {
+  border-bottom: none;
+}
+
+.urun-row .form-group {
+  margin-bottom: 0;
+}
+
+.toplam-cell {
+  font-weight: 600;
+  color: var(--urun-satis-success);
+  text-align: right;
+}
+
+.action-cell {
+  display: flex;
+  justify-content: center;
+}
+
+.remove-urun-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--urun-satis-radius-sm);
+  background-color: var(--urun-satis-danger);
+  color: white;
+  cursor: pointer;
+  transition: var(--urun-satis-transition);
+}
+
+.remove-urun-btn:hover {
+  background-color: var(--urun-satis-danger-hover);
+  transform: translateY(-1px);
+}
+
+.urun-actions {
+  padding: 1.5rem;
+  border-top: 1px solid var(--urun-satis-border);
+  background-color: var(--urun-satis-bg-tertiary);
+}
+
+/* Toplam Özet */
+.total-summary {
+  background-color: var(--urun-satis-bg-tertiary);
+  border: 1px solid var(--urun-satis-border);
+  border-radius: var(--urun-satis-radius-base);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.total-amount {
+  color: var(--urun-satis-success);
+  font-size: 1.5rem;
+}
+
+/* Form Aksiyonları */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 2rem;
+  border-top: 1px solid var(--urun-satis-border);
+  margin-top: 2rem;
+}
+
+/* Modal Stilleri */
+.urun-satis-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--urun-satis-bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.urun-satis-modal-content {
+  background-color: var(--urun-satis-bg-primary);
+  border-radius: var(--urun-satis-radius-lg);
+  box-shadow: var(--urun-satis-shadow-xl);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.urun-satis-modal-content.view-modal {
+  max-width: 800px;
+}
+
+.urun-satis-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 1px solid var(--urun-satis-border);
+}
+
+.urun-satis-modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--urun-satis-text-primary);
+}
+
+.urun-satis-modal-header button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--urun-satis-radius-sm);
+  background-color: transparent;
+  color: var(--urun-satis-text-secondary);
+  cursor: pointer;
+  transition: var(--urun-satis-transition);
+}
+
+.urun-satis-modal-header button:hover {
+  background-color: var(--urun-satis-bg-tertiary);
+  color: var(--urun-satis-text-primary);
+}
+
+.urun-satis-modal-body {
+  padding: 2rem;
+}
+
+.urun-satis-modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 2rem 2rem 2rem;
+  border-top: 1px solid var(--urun-satis-border);
+}
+
+/* Modal İçerik Stilleri */
+.view-details {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.detail-group {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.detail-group.full-width {
+  grid-column: 1 / -1;
+  display: block;
+}
+
+.detail-group label {
+  font-weight: 600;
+  color: var(--urun-satis-text-secondary);
+  font-size: 0.875rem;
+}
+
+.detail-group span {
+  color: var(--urun-satis-text-primary);
+  font-size: 0.875rem;
+}
+
+.urun-table {
+  margin-top: 0.5rem;
+  overflow-x: auto;
+}
+
+.urun-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--urun-satis-border);
+  border-radius: var(--urun-satis-radius-sm);
+  overflow: hidden;
+}
+
+.urun-table th,
+.urun-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--urun-satis-border);
+  font-size: 0.875rem;
+}
+
+.urun-table th {
+  background-color: var(--urun-satis-bg-tertiary);
+  font-weight: 600;
+  color: var(--urun-satis-text-secondary);
+}
+
+.urun-table tbody tr:hover {
+  background-color: var(--urun-satis-bg-secondary);
+}
+
+.urun-table tfoot .total-row td {
+  background-color: var(--urun-satis-bg-tertiary);
+  font-weight: 600;
+  color: var(--urun-satis-text-primary);
+  border-top: 2px solid var(--urun-satis-border);
+}
+
+/* Silme Onayı */
+.delete-confirmation {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.delete-confirmation svg {
+  margin-bottom: 1rem;
+}
+
+.delete-confirmation p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--urun-satis-text-primary);
+}
+
+.warning-text {
+  color: var(--urun-satis-danger);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Email Onayı */
+.mail-confirmation-modal .urun-satis-modal-content {
+  max-width: 500px;
+}
+
+.mail-confirmation-content {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.mail-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: rgba(8, 145, 178, 0.1);
+  border-radius: 50%;
+  color: var(--urun-satis-info);
+  margin-bottom: 1rem;
+}
+
+.mail-confirmation-content h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--urun-satis-text-primary);
+}
+
+.mail-confirmation-content p {
+  margin: 0.5rem 0;
+  color: var(--urun-satis-text-secondary);
+  line-height: 1.6;
+}
+
+.email-list {
+  background-color: var(--urun-satis-bg-tertiary);
+  border-radius: var(--urun-satis-radius-base);
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.email-list p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  color: var(--urun-satis-text-primary);
+}
+
+.email-list ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--urun-satis-text-secondary);
+}
+
+.email-list li {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+  .urun-satis-container {
+    padding: 1rem;
+  }
+
+  .urun-satis-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .urun-satis-actions {
+    justify-content: center;
+  }
+
+  .form-group-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .urun-list-headers,
+  .urun-row {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr 60px;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .urun-satis-table-container {
+    font-size: 0.875rem;
+  }
+
+  .urun-satis-table th,
+  .urun-satis-table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .urun-satis-title-container h1 {
+    font-size: 2rem;
+  }
+
+  .search-filter-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .urun-list-headers {
+    display: none;
+  }
+
+  .urun-row {
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--urun-satis-border);
+    border-radius: var(--urun-satis-radius-base);
+    margin-bottom: 1rem;
+  }
+
+  .urun-row .form-group {
+    margin-bottom: 0.5rem;
+  }
+
+  .urun-row .form-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .urun-satis-table {
+    font-size: 0.75rem;
+  }
+
+  .urun-satis-table th,
+  .urun-satis-table td {
+    padding: 0.5rem;
+  }
+
+  .urun-satis-actions-cell button {
+    width: 32px;
+    height: 32px;
+    margin: 0 0.125rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .urun-satis-modal {
+    padding: 1rem;
+  }
+
+  .urun-satis-modal-content {
+    max-height: 85vh;
+  }
+
+  .urun-satis-modal-header,
+  .urun-satis-modal-body,
+  .urun-satis-modal-actions {
+    padding: 1.5rem;
+  }
+
+  .detail-group {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .detail-group label {
+    font-weight: 600;
+    color: var(--urun-satis-text-primary);
+  }
+}
+
+@media (max-width: 480px) {
+  .urun-satis-container {
+    padding: 0.5rem;
+  }
+
+  .urun-satis-header {
+    padding: 1.5rem;
+  }
+
+  .urun-satis-title-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .urun-satis-title-container p {
+    font-size: 1rem;
+  }
+
+  .urun-satis-actions {
+    flex-wrap: wrap;
+  }
+
+  .export-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .urun-satis-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .urun-satis-form-view,
+  .urun-satis-list-view {
+    padding: 1rem;
+  }
+
+  .urun-list-container h3 {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .urun-actions {
+    padding: 1rem;
+  }
+
+  .total-summary {
+    padding: 1rem;
+  }
+
+  .total-row {
+    font-size: 1rem;
+  }
+
+  .total-amount {
+    font-size: 1.25rem;
+  }
+
+  .urun-satis-modal-header h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Özel Animasyonlar */
+@keyframes urun-satis-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes urun-satis-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.urun-satis-container>* {
+  animation: urun-satis-fade-in 0.6s ease-out;
+}
+
+.urun-satis-table tbody tr {
+  animation: urun-satis-slide-in 0.4s ease-out;
+}
+
+.urun-row {
+  animation: urun-satis-fade-in 0.3s ease-out;
+}
+
+/* Focus Stilleri */
+.urun-satis-btn:focus,
+.form-control:focus,
+.search-bar input:focus,
+.search-field-button:focus {
+  outline: 2px solid var(--urun-satis-primary);
+  outline-offset: 2px;
+}
+
+/* Yüksek Kontrast Desteği */
+@media (prefers-contrast: high) {
+  :root {
+    --urun-satis-border: #000;
+    --urun-satis-text-secondary: #000;
+    --urun-satis-text-tertiary: #000;
+  }
+}
+
+/* Reduced Motion Desteği */
+@media (prefers-reduced-motion: reduce) {
+
+  .urun-satis-btn,
+  .form-control,
+  .search-bar input,
+  .search-field-button,
+  .urun-satis-actions-cell button,
+  .remove-urun-btn,
+  .urun-satis-modal-header button,
+  .loading-spinner {
+    transition: none;
+    animation: none;
+  }
+
+  .urun-satis-container>*,
+  .urun-satis-table tbody tr,
+  .urun-row {
+    animation: none;
+  }
+}
+
+/* Print Stilleri */
+@media print {
+
+  .urun-satis-header .urun-satis-actions,
+  .search-filter-container,
+  .urun-satis-actions-cell,
+  .urun-satis-modal {
+    display: none !important;
+  }
+
+  .urun-satis-container {
+    background: white;
+    color: black;
+    padding: 0;
+  }
+
+  .urun-satis-table,
+  .urun-satis-table th,
+  .urun-satis-table td {
+    border: 1px solid black;
+  }
+}
+
+/* Tooltip Stilleri */
+[title] {
+  position: relative;
+}
+
+/* Scroll Bar Özelleştirmesi */
+.urun-satis-table-container::-webkit-scrollbar,
+.urun-satis-modal-content::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.urun-satis-table-container::-webkit-scrollbar-track,
+.urun-satis-modal-content::-webkit-scrollbar-track {
+  background: var(--urun-satis-bg-tertiary);
+  border-radius: var(--urun-satis-radius-sm);
+}
+
+.urun-satis-table-container::-webkit-scrollbar-thumb,
+.urun-satis-modal-content::-webkit-scrollbar-thumb {
+  background: var(--urun-satis-border-active);
+  border-radius: var(--urun-satis-radius-sm);
+}
+
+.urun-satis-table-container::-webkit-scrollbar-thumb:hover,
+.urun-satis-modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--urun-satis-text-tertiary);
+}
+
+/* Accessibility Improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.urun-satis-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.urun-satis-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+}
+
+.urun-satis-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/><circle cx="20" cy="80" r="0.8" fill="white" opacity="0.12"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.urun-satis-title-container {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.urun-satis-title-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+}
+
+.urun-satis-title-container p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-left {
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-text h1,
+  .page-title,
+  .urun-satis-title-container h1 {
+    font-size: 2rem;
+  }
+
+  .header-subtitle,
+  .urun-satis-title-container p {
+    font-size: 1rem;
+  }
+
+  .modern-app-header,
+  .page-header {
+    padding: 2rem 0;
+  }
+
+  .urun-satis-header {
+    padding: 2rem 1rem;
+    margin: 0 1rem 2rem 1rem;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .header-text h1,
+  .page-title,
+  .urun-satis-title-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-main-icon {
+    font-size: 2rem;
+  }
+
+  .header-icon-wrapper {
+    padding: 0.8rem;
+  }
+
+  .btn-back {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+.urun-satis-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.urun-satis-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+}
+
+.urun-satis-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/><circle cx="20" cy="80" r="0.8" fill="white" opacity="0.12"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.urun-satis-title-container {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.urun-satis-title-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+}
+
+.urun-satis-title-container p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .header-left {
+    text-align: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .header-text h1,
+  .page-title,
+  .urun-satis-title-container h1 {
+    font-size: 28px;
+  }
+  
+  .header-subtitle,
+  .urun-satis-title-container p {
+    font-size: 14px;
+  }
+  
+  .page-header,
+  .urun-satis-header {
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .modern-app-header {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content,
+  .page-header,
+  .urun-satis-header {
+    padding: 20px;
+  }
+  
+  .header-text h1,
+  .page-title,
+  .urun-satis-title-container h1 {
+    font-size: 24px;
+  }
+  
+  .header-main-icon {
+    font-size: 24px;
+  }
+  
+  .header-icon-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .btn-back {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .modern-app-header,
+  .page-header,
+  .urun-satis-header {
+    border-radius: 16px;
+  }
+}

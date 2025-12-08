@@ -1,0 +1,195 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 280px;
+  background: hsl(200 85% 95%);
+  color: hsl(210 15% 35%);
+  box-shadow: 0 4px 20px -2px hsl(200 50% 50% / 0.1);
+  border-right: 1px solid hsl(200 50% 85%);
+}
+
+.logo-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid hsl(200 50% 85%);
+  background: linear-gradient(135deg, hsl(200 85% 92%), hsl(180 75% 88%));
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(210 15% 25%);
+  text-align: center;
+  letter-spacing: 0.025em;
+  margin: 0;
+}
+
+.nav-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.nav-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-section li {
+  margin: 0;
+}
+
+.nav-section a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  color: hsl(210 15% 35%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-section a:hover {
+  background-color: hsl(200 85% 88%);
+  color: hsl(210 15% 25%);
+  box-shadow: 0 2px 8px -2px hsl(200 50% 50% / 0.1);
+}
+
+.nav-section a.active {
+  background-color: hsl(200 85% 85%);
+  color: hsl(210 15% 25%);
+  box-shadow: 0 2px 8px -2px hsl(200 50% 50% / 0.15);
+  font-weight: 600;
+}
+
+.nav-section a svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.logout-section {
+  border-top: 1px solid hsl(200 50% 85%);
+  padding: 1rem;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: transparent;
+  color: hsl(210 15% 35%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logout-button:hover {
+  background-color: hsl(0 85% 90%);
+  color: hsl(0 85% 35%);
+  box-shadow: 0 2px 8px -2px hsl(0 50% 50% / 0.1);
+}
+
+.logout-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+  }
+}
+
+/* --- Mevcut stilleriniz aynı kalacak --- */
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 280px;
+  background: hsl(200 85% 95%);
+  color: hsl(210 15% 35%);
+  box-shadow: 0 4px 20px -2px hsl(200 50% 50% / 0.1);
+  border-right: 1px solid hsl(200 50% 85%);
+  /* Animasyon için geçiş eklendi */
+  transition: transform 0.3s ease-in-out;
+  /* Z-index masaüstünde de eklenebilir, sorun olmaz */
+  z-index: 1000;
+}
+
+/* ... Diğer tüm mevcut stilleriniz buraya gelecek ... */
+
+.logo-section { /* ... */ }
+.logo-text { /* ... */ }
+.nav-section { /* ... */ }
+/* ... */
+.logout-button svg { /* ... */ }
+
+
+/* --- YENİ EKLENEN STİLLER --- */
+
+/* Hamburger Menü Butonu */
+.mobile-menu-toggle {
+  display: none; /* Masaüstünde gizli */
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001; /* Her zaman en üstte */
+  background-color: hsl(200 85% 92% / 0.8);
+  backdrop-filter: blur(5px);
+  border: 1px solid hsl(200 50% 85%);
+  border-radius: 0.75rem;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: hsl(210 15% 25%);
+  box-shadow: 0 4px 12px -2px hsl(200 50% 50% / 0.2);
+}
+
+/* Arka Plan Overlay */
+.sidebar-overlay {
+  display: none; /* Masaüstünde gizli */
+  position: fixed;
+  inset: 0; /* top, right, bottom, left: 0 */
+  background-color: hsl(0 0% 0% / 0.5);
+  z-index: 999; /* Sidebar'ın arkasında */
+}
+
+@media (max-width: 768px),
+       (orientation: landscape) and (max-device-width: 1024px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .sidebar-overlay {
+    display: block;
+  }
+  .sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    box-shadow: 0 0 25px hsl(200 50% 50% / 0.2);
+  }
+  .sidebar-container.open {
+    transform: translateX(0);
+  }
+}

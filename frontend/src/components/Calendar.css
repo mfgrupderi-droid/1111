@@ -1,0 +1,20 @@
+.rdp {
+  margin: 0; --rdp-cell-size: 38px; --rdp-accent-color: var(--accent-primary);
+  --rdp-background-color: rgba(0, 122, 255, 0.1); font-size: 0.9rem;
+}
+.rdp-caption { display: flex; justify-content: space-between; align-items: center; padding: 0 4px 12px 4px; }
+.rdp-caption_label { font-size: 1rem; font-weight: 600; }
+.rdp-nav { display: flex; gap: 4px; }
+.rdp-nav_button {
+  width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 8px; border: 1px solid var(--border-primary); background-color: var(--surface-primary);
+  transition: background-color 0.2s;
+}
+.rdp-nav_button:hover { background-color: var(--surface-secondary); }
+.rdp-head_cell { font-weight: 500; color: var(--text-secondary); font-size: 0.8rem; }
+.rdp-day { border-radius: 8px; transition: background-color 0.2s, color 0.2s; cursor: pointer; }
+.rdp-day:hover:not(.absent-day):not(.today-day) { background-color: var(--surface-secondary); }
+.absent-day { font-weight: bold !important; background-color: var(--accent-danger) !important; color: white !important; }
+.today-day { font-weight: 600 !important; background-color: var(--accent-warning-bg) !important; color: var(--accent-warning-fg) !important; }
+.today-day.absent-day { background-color: var(--accent-danger) !important; color: white !important; }
+.rdp-day_outside { color: var(--text-tertiary); opacity: 0.5; cursor: default; }

@@ -1,0 +1,145 @@
+
+.modal-container {
+    padding: 24px;
+    position: relative;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #666;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.modal-close-button:hover {
+    background-color: #e5e5e5;
+    color: #111;
+}
+
+
+.modal-header { display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); }
+.modal-employee-photo { width: 60px; height: 60px; border-radius: 50%; }
+.modal-header h2 { margin: 0; font-size: 1.4rem; font-weight: 600; }
+.modal-header p { margin: 4px 0 0; color: var(--text-secondary); }
+
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.actions-panel, .calendar-panel { padding: 0 8px; }
+
+
+.add-absence-section h3, .absence-list-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.input-group { display: flex; gap: 8px; }
+.date-input-modal {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+.add-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.add-button:hover { background-color: var(--accent-hover-color); }
+
+
+.absence-list-section { margin-top: 24px; }
+.absence-list { list-style: none; padding: 0; margin: 0; max-height: 200px; overflow-y: auto; }
+.absence-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+}
+.absence-list li:nth-child(odd) { background-color: #f9f9f9; }
+.delete-button {
+    background: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+}
+.delete-button:hover { background-color: #fce8e6; color: #c5221f; }
+.no-absence-text { color: var(--text-secondary); font-size: 0.9rem; }
+
+
+.calendar-panel .rdp {
+    margin: 0;
+    --rdp-cell-size: 36px;
+    --rdp-accent-color: #dc2626; 
+    --rdp-background-color: #fee2e2; 
+    --rdp-accent-color-dark: #dc2626;
+    --rdp-background-color-dark: #fee2e2;
+}
+.rdp-caption_label { font-weight: 600; }
+.rdp-head_cell { font-weight: 500; color: var(--text-secondary); font-size: 0.85rem; }
+.rdp-day { border-radius: 8px; }
+.absent-day:not(.rdp-day_outside) { font-weight: bold; color: var(--rdp-accent-color); background-color: var(--rdp-background-color); }
+
+
+@media (max-width: 768px) {
+    .modal-body { grid-template-columns: 1fr; }
+    .calendar-panel { margin-top: 24px; }
+}
+
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(10, 10, 10, 0.75);
+  z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+.ReactModal__Overlay--after-open { opacity: 1; }
+.ReactModal__Overlay--before-close { opacity: 0; }
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 800px; 
+  width: 90%;
+  outline: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9);
+  transition: transform 300ms ease-in-out;
+}
+.ReactModal__Content--after-open { transform: scale(1); }
+.ReactModal__Content--before-close { transform: scale(0.9); }

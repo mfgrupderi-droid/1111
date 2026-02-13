@@ -1,0 +1,28 @@
+.modal-container { background-color: var(--surface-secondary); }
+.modal-header {
+  display: flex; justify-content: space-between; align-items: center; padding: 12px 16px 12px 20px;
+  border-bottom: 1px solid var(--border-primary); background-color: var(--surface-primary);
+}
+.employee-info-header { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.modal-employee-photo { width: 40px; height: 40px; border-radius: 50%; }
+.employee-details-header { display: flex; flex-direction: column; min-width: 0; }
+.employee-details-header h2 { margin: 0; font-size: 1.1rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.employee-details-header p { margin: 0; font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.modal-close-button {
+  background: var(--surface-secondary); border: none; border-radius: 50%; width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-secondary); flex-shrink: 0;
+}
+.modal-body-grid { display: grid; grid-template-columns: 280px 1fr; }
+.actions-panel { padding: 20px; border-right: 1px solid var(--border-primary); background-color: var(--surface-primary); display: flex; flex-direction: column; }
+.panel-title { font-size: 1rem; font-weight: 600; margin: 0 0 16px 0; border-bottom: 1px solid var(--border-primary); padding-bottom: 12px; }
+.absence-list-section { flex-grow: 1; }
+.absence-list { list-style: none; padding: 0; margin: 0; max-height: 280px; overflow-y: auto; }
+.absence-list li { display: flex; justify-content: space-between; align-items: center; padding: 10px 4px; border-bottom: 1px solid var(--border-primary); }
+.absence-list li:last-child { border-bottom: none; }
+.absence-date { font-size: 0.9rem; font-weight: 500; }
+.delete-button { background: transparent; border: none; color: var(--text-tertiary); cursor: pointer; padding: 4px; border-radius: 50%; display: flex; }
+.delete-button:hover { color: var(--accent-danger); background-color: #ffebee; }
+.no-absence-container { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
+.no-absence-text { font-weight: 500; color: var(--text-primary); margin: 0; }
+.no-absence-subtext { font-size: 0.85rem; color: var(--text-secondary); margin: 4px 0 0 0; }
+.calendar-panel { padding: 20px; display: flex; justify-content: center; align-items: flex-start; }

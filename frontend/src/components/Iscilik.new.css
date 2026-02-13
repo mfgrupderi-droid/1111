@@ -1,0 +1,331 @@
+.iscilik-container {
+  padding: 32px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f8fa;
+  min-height: 100vh;
+}
+
+.contractor-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contractor-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  min-width: 220px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+.contractor-card:hover {
+  box-shadow: 0 4px 16px rgba(102,126,234,0.15);
+}
+.contractor-name {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.contractor-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.action-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+}
+.add-contractor-btn {
+  padding: 16px;
+  border-radius: 12px;
+  background: linear-gradient(90deg,#667eea,#5a67d8);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(102,126,234,0.12);
+  min-width: 220px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.contractor-panel {
+  margin-top: 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 32px;
+}
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+.panel-header h2 {
+  margin: 0;
+  flex: 1;
+}
+.panel-actions {
+  display: flex;
+  gap: 8px;
+}
+.back-btn {
+  margin-bottom: 16px;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.model-price-section, .statement-section {
+  margin: 24px 0;
+}
+.model-price-list {
+  margin-top: 12px;
+}
+.model-price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.action-buttons-section {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+.action-button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#667eea,#5a67d8);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.table-actions-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.product-input-section, .payment-input-section {
+  background: #f7fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+.export-section {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+.export-btn {
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+}
+.export-excel {
+  background: #38a169;
+}
+.export-pdf {
+  background: #3182ce;
+}
+
+.product-rows {
+  margin-bottom: 12px;
+}
+.product-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.product-row input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+.product-row button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.delete-row-btn {
+  background: #e53e3e;
+  color: white;
+}
+.add-row-btn {
+  background: #38a169;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.save-btn {
+  background: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.add-btn {
+  margin-left: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.edit-btn {
+  background: #ed8936;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 4px;
+}
+.delete-btn {
+  background: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 4px;
+}
+
+.statement-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f7fafc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.statement-table th, .statement-table td {
+  border: 1px solid #e2e8f0;
+  padding: 8px 12px;
+  text-align: left;
+}
+.statement-table th {
+  background: #edf2f7;
+  font-weight: bold;
+}
+.statement-table td button {
+  padding: 6px 10px;
+  font-size: 12px;
+  margin: 2px;
+}
+
+.payment-input-section input, .product-input-section input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+.add-payment-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: #0008;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  min-width: 320px;
+  max-width: 500px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.modal-content input, .modal-content select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.modal-content button {
+  margin-right: 8px;
+  margin-top: 12px;
+}
+.close-btn {
+  background: #a0aec0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .table-actions-section {
+    grid-template-columns: 1fr;
+  }
+  .product-row {
+    flex-direction: column;
+  }
+  .product-row input {
+    width: 100%;
+  }
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
